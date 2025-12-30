@@ -113,8 +113,10 @@ header.sticky.hide {
 .header-menu__link:hover,
 .submenu__link.active,
 .submenu-list ul li:hover .submenu__link,
+.submenu__link.active,
 .submenu-list ul li:hover i,
 .menu-level-3 ul li:hover .menu-level-3__link,
+.menu-level-3__link.active,
 .header-options a:hover {
     color: var(--cyan-color);
 }
@@ -998,7 +1000,7 @@ header.sticky.hide {
     min-height: 100%;
     padding: 80px 40px 40px;
     box-shadow: 5px 8px 13.92px 2.08px rgba(0, 0, 0, .1);
-    z-index: 1;
+    z-index: 1000;
     overflow-y: auto;
     transform: translateX(100%);
     transition: transform .6s cubic-bezier(.77, 0, .175, 1);
