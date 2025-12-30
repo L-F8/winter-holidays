@@ -54,3 +54,40 @@ submenuLi.forEach((subLink) => {
         menuLevel3.classList.remove('show')
     })
 })
+
+
+// ----------- Xu ly su kien khi truot den 1 height nhat dinh se truot menu va dinh sticky -----------
+const header = document.querySelector("header");
+const backToTop = document.querySelector('.return-home')
+
+const OFFSET_DOWN = 600
+const OFFSET_UP = 500
+
+let isSticky = false
+let isSlidingUp = false
+
+window.addEventListener("scroll", () => {
+    const y = window.scrollY;
+
+    if (y > OFFSET_DOWN && !isSticky) {
+        header.classList.add("sticky");
+        isSticky = true
+        document.body.style.position = 'relative'
+        backToTop.classList.add('show')
+    }
+
+    if (y <= OFFSET_UP && isSticky && !isSlidingUp) {
+        isSlidingUp = true
+        header.classList.add('hide')
+        document.body.style.position = ''
+        backToTop.classList.remove('show')
+    }
+});
+
+header.addEventListener("animationend", (e) => {
+    if (e.animationName === "slideUp") {
+        header.classList.remove("sticky", "hide");
+        isSticky = false;
+        isSlidingUp = false;
+    }
+});

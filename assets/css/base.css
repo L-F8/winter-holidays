@@ -9,7 +9,7 @@
   margin: 0;
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
-  scrollbar-width: smooth;
+  scroll-behavior: smooth;
 }
 
 body {

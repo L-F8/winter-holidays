@@ -3,6 +3,47 @@ header {
     padding: 18px 0;
 }
 
+header {
+    position: relative;
+    width: 100%;
+    z-index: 99;
+}
+
+header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.5s ease-out;
+}
+
+header.sticky.hide {
+    animation: slideUp 0.5s ease-out;
+}
+
+/* Hiệu ứng trượt nhẹ */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-100%);
+    }
+}
+
 .header-wrapper {
     gap: 50px;
 }
@@ -693,6 +734,12 @@ header {
     margin: 60px 0 0;
 }
 
+.winter-resort__item {
+    position: relative;
+    border-radius: 100%;
+    height: 100%;
+}
+
 .winter-resort__image-group {
     border-radius: 100%;
     height: 100%;
@@ -726,6 +773,25 @@ header {
     cursor: pointer;
     border-radius: inherit;
 }
+
+.winter-resort__item span {
+    position: absolute;
+    font-size: 13px;
+    color: var(--white-color);
+    background-color: var(--cyan-color);
+    border-radius: 50%;
+    padding: 16px;
+    line-height: 1;
+    cursor: default;
+    top: 0;
+    right: 0;
+    transform: translate(-92%, 40%);
+}
+
+.winter-resort__item span i {
+    display: inline;
+}
+
 
 
 /* =================== FOOTER =================== */
@@ -873,6 +939,51 @@ header {
 .footer-copyright a:hover {
     color: var(--cyan-color);
 }
+
+.return-home {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1000;
+}
+
+.return-home a {
+    color: var(--cyan-color);
+    background-color: var(--white-color);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
+    display: block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 100%;
+    box-shadow: 4px 6px 15px 0 rgba(0, 0, 0, .08);
+    transition: all 0.2s ease-in-out;
+}
+
+.return-home a:hover {
+    color: var(--white-color);
+    background-color: var(--cyan-color);
+}
+
+.return-home a span {
+    display: contents;
+}
+
+.return-home.hide {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.return-home.hide.show {
+    visibility: visible;
+    opacity: 1;
+}
+
 
 
 /* ===================== OTHERS ==================== */
