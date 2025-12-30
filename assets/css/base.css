@@ -145,6 +145,11 @@ select {
 }
 
 /* ------------- Common Stylesheet for submenu ----------- */
+.submenu-list,
+.menu-level-3 {
+  box-shadow: 0 3px 13px 0 rgba(0, 0, 0, .03);
+}
+
 .submenu-list {
   position: absolute;
   background: var(--white-color);
