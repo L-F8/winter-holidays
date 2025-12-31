@@ -143,3 +143,41 @@ const personSwiper = new Swiper('.person-section', {
         },
     },
 })
+
+
+// ============ AUTO SHOWING ONE CARD ============
+const oneCart = new Swiper('.one-card', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    // speed: 600,
+    autoplay: false,
+
+    allowTouchMove: true,
+    // grabCursor: true,
+
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    },
+})
+
+const temSection = new Swiper('.tem-section', {
+    slidesPerView: 3,
+    centeredSlides: true,   // phan tu dau tien (active) se hien thi o giua
+    spaceBetween: 0,
+    loop: true,
+    speed: 600,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+
+    allowTouchMove: true,
+    // grabCursor: true,
+
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    },
+})

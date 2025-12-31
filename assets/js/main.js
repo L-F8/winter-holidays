@@ -1,3 +1,52 @@
+const selectionGroupLi = document.querySelectorAll('.selection-group ul li')
+
+selectionGroupLi.forEach((li) => {
+    const dropdown = li.querySelector('.transition-default')
+
+    if (!dropdown) return
+
+    li.addEventListener("mouseenter", () => {
+        dropdown.classList.add('transition-hover')
+    })
+
+    li.addEventListener('mouseleave', () => {
+        dropdown.classList.remove('transition-hover')
+    })
+})
+
+// ========================================== //
+const items = document.querySelectorAll('.tem-item')
+
+items.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        clearHoverState()
+
+        const active = document.querySelector('.swiper-slide-active.tem-item')
+
+        if (item.classList.contains('swiper-slide-prev')) {
+            item.classList.add('is-hover-prev')
+            active?.classList.add('is-force-hide')
+        }
+
+        if (item.classList.contains('swiper-slide-next')) {
+            item.classList.add('is-hover-next')
+            active?.classList.add('is-force-hide')
+        }
+    })
+
+    item.addEventListener('mouseleave', () => {
+        clearHoverState()
+    })
+})
+
+function clearHoverState() {
+    document.querySelectorAll('.tem-item').forEach(el => {
+        el.classList.remove('is-hover-prev', 'is-hover-next', 'is-force-hide')
+    })
+}
+
+
+
 // ============ Xu ly dong/mo hidden sidebar content ============
 const btnClose = document.querySelector('.btn-close')
 const openMenuBtn = document.querySelector('.btn-open-menu')

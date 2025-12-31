@@ -213,3 +213,10 @@ select {
   visibility: visible;
   max-height: 100vh;
 }
+
+.set-background {
+  /* background-position: center; */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
