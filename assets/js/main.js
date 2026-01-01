@@ -23,16 +23,18 @@ selectionGroupLi.forEach((li) => {
 const accountLi = document.querySelectorAll('.selection-group>ul>li')
 const accOverlay = document.querySelector('.account-overlay')
 
-accountLi[1].addEventListener('click', () => {
-    accOverlay.classList.add('visible')
-})
-
-
 // ======= Xu ly form trong overlay account =========
 const tabs = document.querySelectorAll('.account-form__tab a')
 const loginForm = document.querySelector('.account-form__login')
 const registerForm = document.querySelector('.account-form__register')
 const fb_and_gg = document.querySelector('.facebook-and-google')
+
+accountLi[1].addEventListener('click', () => {
+    accOverlay.classList.add('visible')
+    tabs[0].classList.add('active')
+    loginForm.classList.add('on-tab')
+    fb_and_gg.classList.add('active')
+})
 
 tabs[0].addEventListener('click', () => {
     tabs[0].classList.add('active')
