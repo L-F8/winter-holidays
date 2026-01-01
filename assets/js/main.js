@@ -1,5 +1,9 @@
-const selectionGroupLi = document.querySelectorAll('.selection-group ul li')
+/**
+ * Xu ly cac su kien trang Home (index.html)
+ */
 
+// ======= Xu ly phan hover vao select chon ngon ngu cua .home-header =========
+const selectionGroupLi = document.querySelectorAll('.selection-group ul li')
 selectionGroupLi.forEach((li) => {
     const dropdown = li.querySelector('.transition-default')
 
@@ -15,7 +19,46 @@ selectionGroupLi.forEach((li) => {
 })
 
 
-// ========================================== //
+// ======= Xu ly dong/mo overlay phan user cua .home-header ============
+const accountLi = document.querySelectorAll('.selection-group>ul>li')
+const accOverlay = document.querySelector('.account-overlay')
+
+accountLi[1].addEventListener('click', () => {
+    accOverlay.classList.add('visible')
+})
+
+
+// ======= Xu ly form trong overlay account =========
+const tabs = document.querySelectorAll('.account-form__tab a')
+const loginForm = document.querySelector('.account-form__login')
+const registerForm = document.querySelector('.account-form__register')
+const fb_and_gg = document.querySelector('.facebook-and-google')
+
+tabs[0].addEventListener('click', () => {
+    tabs[0].classList.add('active')
+    tabs[1].classList.remove('active')
+    loginForm.classList.add('on-tab')
+    registerForm.classList.remove('on-tab')
+    fb_and_gg.classList.add('active')
+})
+
+tabs[1].addEventListener('click', () => {
+    tabs[1].classList.add('active')
+    tabs[0].classList.remove('active')
+    registerForm.classList.add('on-tab')
+    loginForm.classList.remove('on-tab')
+    fb_and_gg.classList.remove('active')
+})
+
+const accForm = document.querySelector('.account-form')
+document.addEventListener('click', (e) => {
+    if (accOverlay.contains(e.target) && !accForm.contains(e.target)) {
+        accOverlay.classList.remove('visible')
+    }
+})
+
+
+// =============== Xu ly select and search group duoi phan banner ================= //
 const homeGroupEqualSelect = document.querySelectorAll('.default-select-div')
 homeGroupEqualSelect.forEach((select) => {
     const homeSelectDropdown = select.nextElementSibling
@@ -59,8 +102,7 @@ homeGroupEqualSelect.forEach((select) => {
 })
 
 
-
-// ========================================== //
+// ================ Xu ly phan tem sliding Pack Up and Go ================== //
 const items = document.querySelectorAll('.tem-item')
 
 items.forEach(item => {
@@ -93,101 +135,10 @@ function clearHoverState() {
 
 
 
-// ============ Xu ly dong/mo hidden sidebar content ============
-const btnClose = document.querySelector('.btn-close')
-const openMenuBtn = document.querySelector('.btn-open-menu')
-const hiddenMenu = document.querySelector('.hidden-menu-left')
-
-openMenuBtn.addEventListener('click', (e) => {
-    e.preventDefault()
-    hiddenMenu.classList.add('open')
-})
-
-btnClose.addEventListener('click', () => {
-    hiddenMenu.classList.remove('open')
-})
-
-// Xu ly khi click vao vung k phai menu thi cung dong menu
-document.addEventListener('click', (e) => {
-    if (!hiddenMenu.contains(e.target) && !openMenuBtn.contains(e.target)) {
-        hiddenMenu.classList.remove('open')
-    }
-})
-
-document.addEventListener('scroll', () => {
-    hiddenMenu.classList.remove('open')
-})
+/**
+ * 
+ */
 
 
-// ============ Xu ly su kien khi hover vao cac menuitem thi hien submenu ============
-const headerMenuLink = document.querySelectorAll('.header-menu ul li')
-
-headerMenuLink.forEach((headerLink) => {
-    const submenu = headerLink.querySelector('.transition-default')
-
-    if (!submenu) {
-        return
-    }
-
-    headerLink.addEventListener('mouseenter', () => {
-        submenu.classList.add('transition-hover')
-    })
-
-    headerLink.addEventListener('mouseleave', () => {
-        submenu.classList.remove('transition-hover')
-    })
-})
 
 
-const submenuLi = document.querySelectorAll('.submenu-list ul li')
-
-submenuLi.forEach((subLink) => {
-    const menuLevel3 = subLink.querySelector('.hidden')
-
-    if (!menuLevel3) return
-
-    subLink.addEventListener('mouseenter', () => {
-        menuLevel3.classList.add('show')
-    })
-
-    subLink.addEventListener('mouseleave', () => {
-        menuLevel3.classList.remove('show')
-    })
-})
-
-
-// ----------- Xu ly su kien khi truot den 1 height nhat dinh se truot menu va dinh sticky -----------
-const header = document.querySelector("header");
-const backToTop = document.querySelector('.return-home')
-
-const OFFSET_DOWN = 600
-const OFFSET_UP = 500
-
-let isSticky = false
-let isSlidingUp = false
-
-window.addEventListener("scroll", () => {
-    const y = window.scrollY;
-
-    if (y > OFFSET_DOWN && !isSticky) {
-        header.classList.add("sticky");
-        isSticky = true
-        document.body.style.position = 'relative'
-        backToTop.classList.add('show')
-    }
-
-    if (y <= OFFSET_UP && isSticky && !isSlidingUp) {
-        isSlidingUp = true
-        header.classList.add('hide')
-        document.body.style.position = ''
-        backToTop.classList.remove('show')
-    }
-});
-
-header.addEventListener("animationend", (e) => {
-    if (e.animationName === "slideUp") {
-        header.classList.remove("sticky", "hide");
-        isSticky = false;
-        isSlidingUp = false;
-    }
-});

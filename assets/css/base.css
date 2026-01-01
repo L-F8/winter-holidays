@@ -214,9 +214,148 @@ select {
   max-height: 1000vh;
 }
 
+
+/* ------------- Common Stylesheet for using background-image ----------- */
 .set-background {
   /* background-position: center; */
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+
+/* ------------- Common Stylesheet for common overlay ----------- */
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(63, 208, 212, .85);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.search-overlay.visible,
+.account-overlay.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.search-overlay-group {
+  display: flex;
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+.search-overlay-group input {
+  flex: 1;
+  padding-left: 30px;
+}
+
+.search-overlay-group input,
+.search-overlay-group input::placeholder {
+  color: #848484;
+  font-size: 14px;
+}
+
+.search-overlay-group a {
+  text-transform: uppercase;
+  color: var(--white-color);
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 25px 70px;
+  font-size: 13px;
+  background-color: #3fd0d4;
+  transition: background-color 0.3s ease;
+}
+
+.search-overlay-group a:hover {
+  background-color: #23a9af;
+}
+
+.account-overlay.search-overlay {
+  background: rgba(255, 255, 255, .9);
+}
+
+.account-form {
+  background: #23a9af;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 450px;
+}
+
+.account-form__tab a {
+  cursor: pointer;
+  text-align: center;
+  color: var(--white-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .1em;
+  width: calc(100% / 2);
+  padding: 10px 0;
+  background-color: #23a9af;
+  transition: background-color .3s ease;
+}
+
+.account-form__tab a.active,
+.account-form__iframe {
+  background-color: var(--cyan-color);
+}
+
+.account-form__iframe {
+  transition: all .3s ease;
+  padding: 20px 40px;
+}
+
+.account-form__login,
+.account-form__register {
+  color: var(--white-color);
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all .3s ease;
+}
+
+.account-form__login.on-tab,
+.account-form__register.on-tab {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+}
+
+.account-form__login p,
+.account-form__register p {
+  margin: 0 0 25px;
+}
+
+.account-form__input-group {
+  position: relative;
+  background: rgba(255, 255, 255, .25);
+  margin: 8px 0 0;
+}
+
+.account-form__input-group i {
+  position: absolute;
+  left: 20px;
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}
+
+.account-form__input-group input {
+  width: 100%;
+  background: transparent;
+  padding: 14px 20px;
+  padding-left: 50px;
+}
+
+.account-form__input-group input,
+.account-form__input-group input::placeholder {
+  color: var(--white-color);
+}

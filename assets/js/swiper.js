@@ -1,3 +1,7 @@
+/**
+ * Xu ly cac phan auto sliding cho banner, blog, ...
+ */
+
 // ============ AUTO SHOWING BANNER ============
 const swiper = new Swiper(".swiper-banner", {
     // slidesPerView: 1,
@@ -162,6 +166,7 @@ const oneCart = new Swiper('.one-card', {
     },
 })
 
+// ============ AUTO SHOWING PACK UP AND GO ============
 const temSection = new Swiper('.tem-section', {
     slidesPerView: 3,
     centeredSlides: true,   // phan tu dau tien (active) se hien thi o giua

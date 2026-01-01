@@ -32,6 +32,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link
       rel="stylesheet"
@@ -67,16 +68,16 @@
               </a>
             </div>
             <div class="home-header__socials">
-              <a href="#">
+              <a href="https://x.com/QodeInteractive">
                 <i class="fa-brands fa-twitter"></i>
               </a>
-              <a href="#">
+              <a href="https://www.pinterest.com/qodeinteractive/">
                 <i class="fa-brands fa-pinterest-p"></i>
               </a>
-              <a href="#">
+              <a href="https://www.facebook.com/QodeInteractive/">
                 <i class="fa-brands fa-facebook-f"></i>
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/qodeinteractive/">
                 <i class="fa-brands fa-instagram"></i>
               </a>
             </div>
@@ -1841,6 +1842,125 @@
         </div>
       </div>
     </div>
+
+    <div class="search-overlay">
+      <span
+        style="
+          padding: 10px 14px;
+          display: inline-block;
+          font-size: 16px;
+          float: right;
+          cursor: pointer;
+        "
+      >
+        <i style="color: #fff" class="fa-solid fa-x"></i>
+      </span>
+
+      <div class="search-overlay-group">
+        <input type="text" placeholder="Search..." />
+        <a href="">Find Now</a>
+      </div>
+    </div>
+
+    <div class="account-overlay search-overlay">
+      <div class="account-form">
+        <div class="account-form__tab d-flex">
+          <a class="active">Login</a>
+          <a>Regiser</a>
+        </div>
+        <div class="account-form__iframe">
+          <div class="account-form__login on-tab">
+            <form action="">
+              <h2>Sign In Here!</h2>
+              <p>Log into your account in just a few simple steps.</p>
+              <div class="account-form__input-group grid">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Username" required />
+              </div>
+              <div class="account-form__input-group grid">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Password" required />
+              </div>
+              <div
+                class="d-flex"
+                style="justify-content: space-between; margin: 20px 0"
+              >
+                <label class="remember-me" for="remember-me">
+                  <input type="checkbox" name="" id="remember-me" />
+                  Remember me
+                </label>
+                <a href="#" class="lost-your-password">Lost Your Password?</a>
+              </div>
+              <button type="submit" class="account-submit-btn">Sign In</button>
+              <span style="margin: 10px 0; display: block"
+                >Sign in with Facebook or Google+</span
+              >
+            </form>
+            
+          </div>
+          <div class="facebook-and-google active d-flex" style="margin: 0 -40px -20px">
+              <a
+                href="#"
+                style="
+                  padding: 10px;
+                  font-weight: 600;
+                  letter-spacing: 0.1em;
+                  color: #fff;
+                  text-transform: uppercase;
+                  width: 50%;
+                  text-align: center;
+                  background-color: rgb(59, 89, 152);
+                "
+                >Facebook</a
+              >
+              <a
+                href="#"
+                style="
+                  padding: 10px;
+                  font-weight: 600;
+                  letter-spacing: 0.1em;
+                  color: #fff;
+                  text-transform: uppercase;
+                  width: 50%;
+                  text-align: center;
+                  background-color: rgb(221, 75, 57);
+                "
+                >Google+</a
+              >
+            </div>
+          <div class="account-form__register">
+            <form action="">
+              <h2>Register Now!</h2>
+              <p>Join the SetSail community today & set up a free account.</p>
+              <div class="account-form__input-group grid">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Username" required />
+              </div>
+              <div class="account-form__input-group grid">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="Email" required />
+              </div>
+              <div class="account-form__input-group grid">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Password" required />
+              </div>
+              <div class="account-form__input-group grid">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Repeat Password" required />
+              </div>
+              <p style="margin: 10px 0; display: block"></p>
+                Your personal data will be used to support your experience
+                throughout this website, to manage access to your account, and
+                for other purposes described in our
+                <a class="register-policy" href="#">privacy policy.</a>
+              </p>
+              <button type="submit" class="account-submit-btn">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/common-event.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/swiper.js"></script>
   </body>
