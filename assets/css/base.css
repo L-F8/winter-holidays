@@ -211,7 +211,7 @@ select {
 .transition-hover {
   opacity: 1;
   visibility: visible;
-  max-height: 100vh;
+  max-height: 1000vh;
 }
 
 .set-background {

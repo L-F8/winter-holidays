@@ -406,6 +406,173 @@
     font-weight: 600;
 }
 
+.go-and-discover {
+    position: relative;
+}
+
+.go-and-discover .winter-sports-video {
+    width: unset;
+    position: relative;
+    bottom: -30px;
+    margin-top: -30px;
+}
+
+.gallery-grid {
+    margin: 40px 0;
+    gap: 20px;
+    padding: 0 40px;
+}
+
+.gallery-grid .home-mediterranean__item {
+    max-height: 270px;
+}
+
+.gallary-bottom-text {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    width: 100%;
+    color: var(--white-color);
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.gallary-bottom-text span {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.gallery-place-and-price p {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -.05em;
+    text-align: left;
+}
+
+.gallery-place-and-price span {
+    font-size: 14px;
+}
+
+.gallery-place-and-price span i {
+    font-size: 12px;
+}
+
+.gallery-place-and-price span b {
+    margin-left: 5px;
+    font-weight: 500;
+}
+
+.banner-and-slider {
+    position: relative;
+}
+
+.home-about-group {
+    position: absolute;
+    bottom: -36px;
+    width: 1100px;
+    height: 78px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    background-color: var(--white-color);
+    z-index: 10;
+    box-shadow: 0 3px 13px 0 rgba(0, 0, 0, .07);
+    display: flex;
+    align-items: center;
+}
+
+.home-group-equal,
+.home-group-other {
+    height: 100%;
+}
+
+.home-group-other {
+    width: 180px;
+}
+
+.home-group-other a {
+    height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 5.5;
+    color: var(--white-color);
+    background-color: var(--cyan-color);
+    transition: all 0.3s ease;
+}
+
+.home-group-other a:hover {
+    background-color: #23a9af;
+}
+
+.home-group-equal {
+    width: calc((100% - 180px) / 3);
+    border-right: 1px solid #e7e7e7;
+}
+
+.home-group-equal__input,
+.home-group-equal__select {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    color: #848484;
+    position: relative;
+}
+
+.home-group-equal__input input {
+    width: 100%;
+    height: inherit;
+    padding-left: 50px;
+    color: #848484;
+}
+
+.home-group-equal__input input::placeholder {
+    color: #848484;
+}
+
+.home-group-equal__input i {
+    position: absolute;
+    margin-left: 20px;
+    height: inherit;
+    display: inline-flex;
+    align-items: center;
+}
+
+.home-group-equal__select {
+    padding-left: 20px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.default-select-div {
+    cursor: text;
+}
+
+.home-select__dropdown {
+    display: none;
+    background: var(--white-color);
+    width: 100%;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    box-shadow: 0 3px 13px 0 rgba(0, 0, 0, .07);
+    overflow-y: auto;
+    max-height: 230px;
+    z-index: 1000;
+}
+
+.home-select__dropdown ul li a {
+    color: #848484;
+    padding: 10px 30px;
+}
+
+.home-select__dropdown ul li a:hover,
+.home-select__dropdown ul li a.selected {
+    color: var(--cyan-color);
+}
 
 
 /* =================== HEADER =================== */
@@ -877,8 +1044,6 @@ header.sticky.hide {
 
 .winter-sports-section .winter-text p {
     margin: 30px 0 0;
-    padding: 0 88px;
-    font-size: inherit;
 }
 
 .winter-sports-section .winter-text .btn-view-more {
@@ -1142,7 +1307,8 @@ header.sticky.hide {
 
 .winter-text p {
     font-size: 17px;
-    margin: 12px 0 0;
+    margin: 12px auto 0;
+    width: 60%;
     color: #505050;
 }
 

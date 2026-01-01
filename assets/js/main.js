@@ -14,6 +14,52 @@ selectionGroupLi.forEach((li) => {
     })
 })
 
+
+// ========================================== //
+const homeGroupEqualSelect = document.querySelectorAll('.default-select-div')
+homeGroupEqualSelect.forEach((select) => {
+    const homeSelectDropdown = select.nextElementSibling
+
+    if (!homeGroupEqualSelect) return
+
+    select.addEventListener('click', (e) => {
+        e.stopPropagation()
+        homeGroupEqualSelect.forEach((otherSelect) => {
+            const otherDropdown = otherSelect.nextElementSibling
+
+            if (otherDropdown !== homeSelectDropdown) {
+                otherDropdown.style.display = 'none'
+            }
+        })
+
+        homeSelectDropdown.style.display = homeSelectDropdown.style.display === 'block' ? 'none' : 'block';
+    })
+
+
+    document.addEventListener('click', (e) => {
+        if (!select.contains(e.target) && !homeSelectDropdown.contains(e.target)) {
+            homeSelectDropdown.style.display = 'none'
+        }
+    })
+
+    window.addEventListener('scroll', () => {
+        if (homeSelectDropdown.style.display === 'block') {
+            const rect = select.getBoundingClientRect()
+            const vpHeight = window.innerHeight
+
+            if (rect.bottom + homeSelectDropdown.offsetHeight > vpHeight) {
+                homeSelectDropdown.style.top = 'auto'
+                homeSelectDropdown.style.bottom = '100%'
+            } else {
+                homeSelectDropdown.style.bottom = 'auto';
+                homeSelectDropdown.style.top = '100%';
+            }
+        }
+    })
+})
+
+
+
 // ========================================== //
 const items = document.querySelectorAll('.tem-item')
 
