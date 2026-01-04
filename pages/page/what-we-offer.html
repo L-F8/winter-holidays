@@ -1565,6 +1565,14 @@
     <script src="../../assets/js/swiper.js"></script>
     <script src="../../assets/js/parallax.js"></script>
     <script>
+      const wwoBg = document.getElementById("wwo-bg");
+      const wwoCt = document.querySelector("wwo-content");
+
+      window.addEventListener("scroll", function () {
+        let offset = window.pageYOffset;
+        wwoBg.style.transform = `translateY(-${offset * 0.35}px)`;
+      });
+
       document.addEventListener("DOMContentLoaded", () => {
         const targetSection = document.getElementById("wwo-bg");
         const img = document.querySelector(".wwo-slider img");
