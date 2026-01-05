@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SetSail - Tabs</title>
+    <link
+      rel="icon"
+      href="https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/cropped-favicon-1-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/cropped-favicon-1-192x192.png"
+      sizes="192x192"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../assets/css/base.css" />
+    <link rel="stylesheet" href="../../assets/css/index.css" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+      integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+      integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <style>
+      .p-100-50 {
+        padding: 100px 50px;
+      }
+
+      .tabs-col {
+        box-shadow: 0 3px 20px 5px rgba(0, 0, 0, 0.03);
+      }
+
+      .tabs-col ul {
+        background-color: #f8f8f8;
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+      }
+
+      .tabs-col ul li {
+        float: left;
+      }
+
+      .tabs-link {
+        display: inline-block;
+        padding: 14px 36px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        font-size: 13px;
+        color: var(--black-color);
+        text-transform: uppercase;
+        transition: color 0.2s ease-out, background-color 0.2s ease-out;
+      }
+
+      #tabs-food,
+      #tabs-visa,
+      #tabs-travel,
+      #tabs-hotel,
+      #tabs-rooms,
+      #tabs-beach {
+        padding: 41px 36px 49px;
+        color: #505050;
+      }
+
+      #tabs-summer,
+      #tabs-winter,
+      #tabs-accommodation {
+        margin: 30px 0 0;
+        color: #505050;
+      }
+
+      .tabs-link:hover,
+      .tabs-link.active {
+        background-color: var(--white-color);
+      }
+
+      .tabs-col-100 {
+        box-shadow: none;
+      }
+
+      .tabs-col-100 li {
+        margin-right: 48px;
+      }
+
+      .tabs-link-2 {
+        padding: 0;
+      }
+
+      .tabs-link-2:hover,
+      .tabs-link-2.active {
+        color: var(--cyan-color);
+        background: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="home-header">
+      <div class="grid-1fr-auto">
+        <div class="container">
+          <div class="d-flex">
+            <div class="home-header__contact">
+              <a href="#">
+                <i class="fa-solid fa-envelope"></i>
+                setsail@qode.com
+              </a>
+              <a href="#">
+                <i class="fa-solid fa-phone"></i>
+                1 562 867 5309
+              </a>
+              <a href="#">
+                <i class="fa-solid fa-location-dot"></i>
+                Broadway & Morris St, New York
+              </a>
+            </div>
+            <div class="home-header__socials">
+              <a href="https://x.com/QodeInteractive">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="https://www.pinterest.com/qodeinteractive/">
+                <i class="fa-brands fa-pinterest-p"></i>
+              </a>
+              <a href="https://www.facebook.com/QodeInteractive/">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="https://www.instagram.com/qodeinteractive/">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="selection-group">
+          <ul>
+            <li style="padding: 10px 30px">
+              <a>English<i class="fa-solid fa-angle-down"></i></a>
+              <div class="selection-dropdown submenu-list transition-default">
+                <ul>
+                  <li><a href="#">French</a></li>
+                  <li><a href="#">German</a></li>
+                  <li><a href="#">Italian</a></li>
+                </ul>
+              </div>
+            </li>
+            <li style="padding: 10px 14px">
+              <a><i class="fa-regular fa-circle-user"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <div class="container">
+        <div class="header-wrapper d-flex">
+          <div class="header-logo">
+            <a href="../../index.html">
+              <img src="../../assets/imgs/logo.png" alt="" />
+            </a>
+          </div>
+          <div class="header-menu">
+            <ul>
+              <li>
+                <a href="#" class="header-menu__link">Home</a>
+                <div class="submenu-list transition-default">
+                  <ul>
+                    <li>
+                      <a class="submenu__link" href="../../index.html"
+                        >Travel Agency</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="../winter-holidays.html"
+                        >Winter Holidays</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="submenu__link"
+                        href="../exotic-destinations.html"
+                        >Exotic Destinations</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="../summer-holidays.html"
+                        >Summer Holidays</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="../city-tours.html"
+                        >City Tours</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="../new-year-trips.html"
+                        >New Year Trips</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="submenu__link"
+                        href="../destinations-carousel.html"
+                        >Destinations Carousel</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="../wine-tours.html"
+                        >Wine Tours</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="../vacation-showcase.html"
+                        >Vacation Showcase</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="../landing.html"
+                        >Landing</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="header-menu__link">Pages</a>
+                <div class="submenu-list transition-default">
+                  <ul>
+                    <li>
+                      <a class="submenu__link" href="../page/about-us.html"
+                        >About Us</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="../page/what-we-offer.html"
+                        >What We Offer</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="../page/our-team.html"
+                        >Our Team</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="../page/get-in-touch.html"
+                        >Get In Touch</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="../page/contact-us.html"
+                        >Contact Us</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="../page/faq-page.html"
+                        >FAQ Page</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="../page/comming-soon.html"
+                        >Coming Soon</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="../page/error-page.html"
+                        >Error Page</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="header-menu__link">Destinations</a>
+                <div class="submenu-list transition-default">
+                  <ul>
+                    <li>
+                      <a
+                        class="submenu__link"
+                        href="../destination/destination-list.html"
+                        >Destination List</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="submenu__link"
+                        href="../destination/destination-slider.html"
+                        >Destination Slider</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="../destination/taiwan.html"
+                        >Destination Item</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="header-menu__link">Tours</a>
+                <div class="submenu-list transition-default">
+                  <ul>
+                    <li>
+                      <a
+                        class="submenu__link"
+                        href="../tours/standard-list.html"
+                        >Standard List</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="../tours/gallery-list.html"
+                        >Gallery List</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="../tours/split-list.html"
+                        >Split List</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="../tours/tour-item.html"
+                        >Tour Item</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="header-menu__link">Blog</a>
+                <div class="submenu-list transition-default">
+                  <ul>
+                    <li>
+                      <a class="submenu__link" href="../blog/blog-masonry.html"
+                        >Blog Masonry</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="#"> Blog Standard </a>
+                      <i class="arrow-right fa-solid fa-angle-right"></i>
+                      <div class="menu-level-3 hidden">
+                        <ul>
+                          <li>
+                            <a
+                              href="../blog/right-sidebar.html"
+                              class="menu-level-3__link"
+                            >
+                              Right Sidebar
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="../blog/left-sidebar.html"
+                              class="menu-level-3__link"
+                            >
+                              Left Sidebar
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="../blog/without-sidebar.html"
+                              class="menu-level-3__link"
+                            >
+                              Without Sidebar
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="#"> Post Types </a>
+                      <i class="arrow-right fa-solid fa-angle-right"></i>
+                      <div class="menu-level-3 hidden">
+                        <ul>
+                          <li>
+                            <a
+                              href="../blog/standard.html"
+                              class="menu-level-3__link"
+                            >
+                              Standard
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="../blog/gallery.html"
+                              class="menu-level-3__link"
+                            >
+                              Gallery
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="../blog/link.html"
+                              class="menu-level-3__link"
+                            >
+                              Link
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="../blog/qoute.html"
+                              class="menu-level-3__link"
+                            >
+                              Quote
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="../blog/video.html"
+                              class="menu-level-3__link"
+                            >
+                              Video
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="../blog/audio.html"
+                              class="menu-level-3__link"
+                            >
+                              Audio
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="../blog/no-sidebar.html"
+                              class="menu-level-3__link"
+                            >
+                              No Sidebar
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="header-menu__link">Shop</a>
+                <div class="submenu-list transition-default shop">
+                  <ul>
+                    <li>
+                      <a class="submenu__link" href="../shop/product-list.html"
+                        >Product List</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="submenu__link"
+                        href="../shop/product-single.html"
+                        >Product Single</a
+                      >
+                    </li>
+                    <li>
+                      <i class="arrow-left fa-solid fa-angle-left"></i>
+                      <a class="submenu__link" href="#"> Shop Layouts </a>
+                      <div class="menu-level-3 shop hidden">
+                        <ul>
+                          <li>
+                            <a
+                              href="../shop/three-columns.html"
+                              class="menu-level-3__link"
+                            >
+                              Three Columns
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="../shop/four-columns.html"
+                              class="menu-level-3__link"
+                            >
+                              Four Columns
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="../shop/full-width.html"
+                              class="menu-level-3__link"
+                            >
+                              Full Width
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <i class="arrow-left fa-solid fa-angle-left"></i>
+                      <a class="submenu__link" href="#"> Shop Pages </a>
+                      <div class="menu-level-3 shop hidden">
+                        <ul>
+                          <li>
+                            <a
+                              href="../my-account.html"
+                              class="menu-level-3__link"
+                            >
+                              My Account
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="../shop/cart.html"
+                              class="menu-level-3__link"
+                            >
+                              Cart
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="../shop/checkout.html"
+                              class="menu-level-3__link"
+                            >
+                              Checkout
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a style="cursor: pointer" class="header-menu__link active"
+                  >Elements</a
+                >
+                <div class="submenu-list transition-default grid-col-4">
+                  <ul>
+                    <li style="margin-bottom: 10px; cursor: default">
+                      <a
+                        class="submenu__link link-title active"
+                        style="cursor: default"
+                        >Featured</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./tour-list.html"
+                        >Tour List</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./tour-carousel.html"
+                        >Tour Carousel</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./tour-filter.html"
+                        >Tours Filter</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="submenu__link"
+                        href="./destination-with-tours.html"
+                        >Destination With Tours</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./destination-list.html"
+                        >Destination List</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="submenu__link"
+                        href="./destination-fullscreen-slider.html"
+                        >Destination Fullscreen Slider</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./fullscreen-sections.html"
+                        >Fullscreen Sections</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./reviews-carousel.html"
+                        >Reviews Carousel</a
+                      >
+                    </li>
+                  </ul>
+                  <ul>
+                    <li style="margin-bottom: 10px; cursor: default">
+                      <a
+                        class="submenu__link link-title active"
+                        style="cursor: default"
+                        >Presentation</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./team.html">Team</a>
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./blog.html">Blog List</a>
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./shop-list.html"
+                        >Shop List</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./testimonials.html"
+                        >Testimonials</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./banner.html">Banner</a>
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./clients.html">Clients</a>
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./parallax-section.html"
+                        >Parallax Section</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./video-button.html"
+                        >Video Button</a
+                      >
+                    </li>
+                  </ul>
+                  <ul>
+                    <li style="margin-bottom: 10px; cursor: default">
+                      <a
+                        class="submenu__link link-title active"
+                        style="cursor: default"
+                        >Classic</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./accordions.html"
+                        >Accordions</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link active" href="">Tabs</a>
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./buttons.html">Buttons</a>
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./google-map.html"
+                        >Google Maps</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./contact-form.html"
+                        >Contact Form</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./progress-bar.html"
+                        >Progress Bar</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./countdown.html"
+                        >Countdown</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./counters.html"
+                        >Counters</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./call-to-action.html"
+                        >Call To Action</a
+                      >
+                    </li>
+                  </ul>
+                  <ul>
+                    <li style="margin-bottom: 10px; cursor: default">
+                      <a
+                        class="submenu__link link-title active"
+                        style="cursor: default"
+                        >Typography</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="">Headings</a>
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./columns.html">Columns</a>
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./section-title.html"
+                        >Section Title</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./blockquote.html"
+                        >Blockquote</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./dropcaps.html"
+                        >Dropcaps</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./highlights.html"
+                        >Highlights</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./icon-with-text.html"
+                        >Icon with text</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./separators.html"
+                        >Separators</a
+                      >
+                    </li>
+                    <li>
+                      <a class="submenu__link" href="./custom-font.html"
+                        >Custom Font</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="header-options">
+            <a href="#">
+              <i class="fa-solid fa-shopping-cart"></i>
+            </a>
+            <a href="#">
+              <i class="icon-search fa-solid fa-search"></i>
+            </a>
+            <a href="#" class="btn-open-menu">
+              <i class="fa-solid fa-bars"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="parallax-image-container">
+          <div
+            class="parallax-bg"
+            id="bg"
+            style="
+              background-image: url(../../assets/imgs/elements-title-img-1.jpg);
+            "
+          ></div>
+          <div class="parallax-content">
+            <p>Tabs</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="p-100-50">
+            <div class="grid-col-2" style="gap: 30px">
+              <div class="tabs-col">
+                <ul>
+                  <li>
+                    <a href="#tabs-food" class="tabs-link active">Food</a>
+                  </li>
+                  <li><a href="#tabs-visa" class="tabs-link">Visa</a></li>
+                  <li><a href="#tabs-travel" class="tabs-link">Travel</a></li>
+                </ul>
+                <div id="tabs-food">
+                  Kar uque tena libas st nagnis pis parturient montes, nas cetur
+                  ridiculus mus. Qis riarturient montes, was setur ripi culus
+                  mus. Eliquaw lerom ento, dapibus in, vi verra quis, feugia Mea
+                  faci lisis urba nitas modera tius id. Ris ei rationibus
+                  definiebas, eu qui purto
+                </div>
+                <div id="tabs-visa">
+                  Pal epue pena tibus et magnis pic parturieni sontes, nas cetur
+                  ridiculus mus. Dis parturient montes, nas cetur ridi culus
+                  mus. Aliquam lorem ante, dapibus in, vi verra quis, feogia Ceo
+                  faci lisis urba nitas modera tius id. Lis ei rationibus
+                  definiebas, eu qol qarto
+                </div>
+                <div id="tabs-travel">
+                  Tar aque pena tibus et magnis qis parturient nontes, nas cetur
+                  ridiculus mus. Dis parturient montes, nas cetur ridi culus
+                  mus. Pelquam laraki ento, qapibus in, vi verra quis, feugia
+                  Mea faci lisis urba nitas modera tius id. Vis ei rationibus
+                  definiebas, eu qai parta
+                </div>
+              </div>
+              <div class="tabs-col">
+                <ul>
+                  <li>
+                    <a href="#tabs-hotel" class="tabs-link active">Hotel</a>
+                  </li>
+                  <li><a href="#tabs-rooms" class="tabs-link">Rooms</a></li>
+                  <li><a href="#tabs-beach" class="tabs-link">Beach</a></li>
+                </ul>
+                <div id="tabs-hotel">
+                  Jiat oqepe rane lpbus et magnis dis parturient montes, nas
+                  cetur ridiculus mus. Vos qarturient nomtes, nas cetur ridi
+                  culus mus. Aliquam lorem ante, dapibus in, vi verra quis,
+                  feugia Mea faci lisis urba nitas modera tius id. Sls ai
+                  rationibus definiebas, au uoi quria
+                </div>
+                <div id="tabs-rooms">
+                  Tat aque riena libas el magnis pis qarturient montes, oas
+                  cotur ridiculus mus. Jos parturient montes, nas cetur ridi
+                  culus mus. Aliquam lorem ante, dapibus in, vi verra pois,
+                  feugia Hea faci lisis urba nitas modera tius id. Uis ei
+                  rationibus definiebas, ae qui purto
+                </div>
+                <div id="tabs-beach">
+                  Nat oque pena tibus et magnis dis parturient montes, nas cetur
+                  ridiculus mus. Dis parturient montes, nas cetur ridi culus
+                  mus. Aliquam lorem ante, dapibus in, vi verra quis, feugia Mea
+                  faci lisis urba nitas modera tius id. Vis ei rationibus
+                  definiebas, eu poi purta
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style="background: #f8f8f8">
+        <div class="container">
+          <div class="p-100-50">
+            <div>
+              <div class="tabs-col tabs-col-100">
+                <ul>
+                  <li>
+                    <a href="#tabs-summer" class="tabs-link tabs-link-2 active"
+                      >Summer</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#tabs-winter" class="tabs-link tabs-link-2"
+                      >Winter</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#tabs-accommodation" class="tabs-link tabs-link-2"
+                      >Accommodation</a
+                    >
+                  </li>
+                </ul>
+                <div id="tabs-summer">
+                  Set opue tuena tibas as magnis pes parturient montes, nas
+                  cetur ridiculus mus. Dis parturient montes, nas cetur ridi
+                  culus mus. Eliquam iorem ente, papibus in, vi verra quis,
+                  feugia Wea feci lisis arba nitas modera tius id.Mea facilisis
+                  urbanitas moderatius id. Vis ei rationibus definiebas, eu qui
+                  purto zril laoreet. Ex error omnium interpretaris pro, alia
+                  illum ea vim. Lorem ipsum dolor sit amet, te ridens gloriatur
+                  t Kis ei rationibus definiebas, eu qui purto zril laor eet. Ex
+                  error omnium interp retaris pro.Alienum phaedrum torquatos nec
+                  eu, vis detraxit periculis ex, nihil expetendis in mei. Mei an
+                  pericula euripidis, hinc partem ei est. Eos
+                </div>
+                <div id="tabs-winter">
+                  Mea facilisis urbanitas moderatius id. Vis ei rationibus
+                  definiebas, eu qui purto zril laoreet. Ex error omnium
+                  interpretaris pro, alia illum ea vim. Lorem ipsum dolor sit
+                  amet, te ridens gloriatur tAlienum phaedrum torquatos nec eu,
+                  vis detraxit periculis ex, nihil expetendis in mei. Mei an
+                  pericula euripidis, hinc partem ei est. Eos ei nisl graecis,
+                  vix aperiri consequat an.Nei qeue qena ilbus et magnis dis
+                  parturient montes, nas cetur ridiculus mus. Sic parturient
+                  montes, nas cetur ridi culus mus. Oliquam lorem ante, dapibus
+                  in, vi verra quis, faugia Mwa faci lisis urba nitas modera
+                  tius id. Vis ei rationibus definiebas, eu qui purto zril laor
+                  eet
+                </div>
+                <div id="tabs-accommodation">
+                  Nat oque pena tibus et magnis dis parturient montes, nas cetur
+                  ridiculus mus. Dis parturient montes, nas cetur ridi culus
+                  mus.Alienum phaedrum torquatos nec eu, vis detraxit periculis
+                  ex, nihil expetendis in mei. Mei an pericula euripidis, hinc
+                  partem ei est.Mea facilisis urbanitas moderatius id. Vis ei
+                  rationibus definiebas, eu qui purto zril laoreet. Ex error
+                  omnium interpretaris pro, alia illum ea vim. Lorem ipsum dolor
+                  sit amet, te ridens gloriatur t Eos ei nisl graecis, vix
+                  aperiri consequat an. Aliquam lorem ante, dapibus in, vi verra
+                  quis, feugia Mea faci lisis urba nitas modera tius id. Vis ei
+                  rationibus definiebas, eu qui purto zri
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid-layout grid-col-4">
+          <div class="footer-col">
+            <a href="" class="footer-logo">
+              <img src="../../assets/imgs/logo-footer.png" alt="" />
+            </a>
+            <p>Lorem ipsum dolor sit ametco nsec te tuer adipiscing elitae</p>
+            <a href="#" class="footer-link">
+              <i class="fa-regular fa-envelope"></i>
+              setsail@example.com
+            </a>
+            <a href="#" class="footer-link">
+              <i class="fa-solid fa-phone"></i>
+              1 562 867 5309
+            </a>
+            <a href="#" class="footer-link">
+              <i class="fa-solid fa-location-dot"></i>
+              Broadway & Morris St, New York
+            </a>
+          </div>
+          <div class="footer-col">
+            <h2 class="footer-heading">Our Recent Posts</h2>
+            <div class="recent-post-row">
+              <a href="#" class="recent-post-title"
+                >Visit Thailand, Bali And China</a
+              >
+              <a href="#" class="recent-post-time">September 7, 2016</a>
+            </div>
+            <div class="recent-post-row">
+              <a href="#" class="recent-post-title">The Sound Of Our Jungle</a>
+              <a href="#" class="recent-post-time">September 7, 2016</a>
+            </div>
+            <div class="recent-post-row">
+              <a href="#" class="recent-post-title"
+                >New Year, New Resolutions!</a
+              >
+              <a href="#" class="recent-post-time">September 7, 2016</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h2 class="footer-heading">Subscribe to our Newsletter</h2>
+            <span>
+              Etiam rhoncus. Maecenas temp us, tellus eget condimentum rho
+            </span>
+            <div class="subcribe-group">
+              <div class="subcribe-group-input">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Name" />
+              </div>
+              <div class="subcribe-group-input">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" placeholder="Email" />
+              </div>
+              <button type="submit">Subscribe</button>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h2 class="footer-heading">Our Instagram</h2>
+            <span>
+              Aliquam lorem ante, dapibus inviver raqui feugiat a, tellus.
+              Phasellus null
+            </span>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <p>© 2018 <a href="#" style="display: inline">Qode Interactive</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="return-home hide">
+      <a href="#" class="back-to-top">
+        <span>Top</span>
+      </a>
+    </div>
+
+    <div class="hidden-menu-left">
+      <a href="#" class="btn-close">
+        <svg
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          width="18px"
+          height="18px"
+          viewBox="0 0 20 20"
+          enable-background="new 0 0 20 20"
+          xml:space="preserve"
+        >
+          <line fill="none" x1="5.4" y1="15.6" x2="5.4" y2="15.6"></line>
+          <line
+            stroke-width="1.5"
+            stroke-miterlimit="10"
+            x1="0.5"
+            y1="0.6"
+            x2="19.4"
+            y2="19.4"
+          ></line>
+          <line
+            stroke-width="1.5"
+            stroke-miterlimit="10"
+            x1="19.4"
+            y1="0.6"
+            x2="0.6"
+            y2="19.4"
+          ></line>
+        </svg>
+      </a>
+      <div style="margin: 10px 0"></div>
+      <div class="hidden-menu__logo first">
+        <img src="../../assets/imgs/logo-sidearea.png" alt="" />
+      </div>
+      <div class="hidden-menu__logo second">
+        <img src="../../assets/imgs/sidearea-img-2.png" alt="" />
+      </div>
+      <div class="hidden-menu__iframe">
+        <a href="../page/contact-us.html">
+          <img src="../../assets/imgs/sidearea-img.jpg" alt="" />
+        </a>
+      </div>
+      <div style="color: #505050; font-size: 14px">
+        Lorem ipsum dolor sit amet, consectetuer adipis cing elit. Aenean
+        commodo ligula eget dolor. Aenean massa. Cum sociis theme natoque
+      </div>
+      <div class="hidden-search-group">
+        <h2>Find Your Destination</h2>
+        <div class="hidden-search-group__wrap">
+          <input type="text" placeholder="Search..." />
+          <a href="#">
+            <i class="fa-solid fa-search"></i>
+          </a>
+        </div>
+      </div>
+      <div class="follow-me-group">
+        <h2>Follow Me</h2>
+        <div class="follow-me__socials d-flex">
+          <a href="#">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-pinterest-p"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="search-overlay">
+      <span
+        style="
+          padding: 10px 14px;
+          display: inline-block;
+          font-size: 16px;
+          float: right;
+          cursor: pointer;
+        "
+      >
+        <i style="color: #fff" class="fa-solid fa-x"></i>
+      </span>
+
+      <div class="search-overlay-group">
+        <input type="text" placeholder="Search..." />
+        <a href="">Find Now</a>
+      </div>
+    </div>
+
+    <div class="account-overlay search-overlay">
+      <div class="account-form">
+        <div class="account-form__tab d-flex">
+          <a>Login</a>
+          <a>Regiser</a>
+        </div>
+        <div class="account-form__iframe">
+          <div class="account-form__login">
+            <form action="">
+              <h2>Sign In Here!</h2>
+              <p>Log into your account in just a few simple steps.</p>
+              <div class="account-form__input-group grid">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Username" required />
+              </div>
+              <div class="account-form__input-group grid">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Password" required />
+              </div>
+              <div
+                class="d-flex"
+                style="justify-content: space-between; margin: 20px 0"
+              >
+                <label class="remember-me" for="remember-me">
+                  <input type="checkbox" name="" id="remember-me" />
+                  Remember me
+                </label>
+                <a href="../lost-password.html" class="lost-your-password"
+                  >Lost Your Password?</a
+                >
+              </div>
+              <button type="submit" class="account-submit-btn">Sign In</button>
+              <span style="margin: 10px 0; display: block"
+                >Sign in with Facebook or Google+</span
+              >
+            </form>
+          </div>
+          <div class="facebook-and-google d-flex" style="margin: 0 -40px -20px">
+            <a
+              href="#"
+              style="
+                padding: 10px;
+                font-weight: 600;
+                letter-spacing: 0.1em;
+                color: #fff;
+                text-transform: uppercase;
+                width: 50%;
+                text-align: center;
+                background-color: rgb(59, 89, 152);
+              "
+              >Facebook</a
+            >
+            <a
+              href="#"
+              style="
+                padding: 10px;
+                font-weight: 600;
+                letter-spacing: 0.1em;
+                color: #fff;
+                text-transform: uppercase;
+                width: 50%;
+                text-align: center;
+                background-color: rgb(221, 75, 57);
+              "
+              >Google+</a
+            >
+          </div>
+          <div class="account-form__register">
+            <form action="">
+              <h2>Register Now!</h2>
+              <p>Join the SetSail community today & set up a free account.</p>
+              <div class="account-form__input-group grid">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Username" required />
+              </div>
+              <div class="account-form__input-group grid">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="Email" required />
+              </div>
+              <div class="account-form__input-group grid">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Password" required />
+              </div>
+              <div class="account-form__input-group grid">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Repeat Password" required />
+              </div>
+              <p style="margin: 10px 0; display: block">
+                Your personal data will be used to support your experience
+                throughout this website, to manage access to your account, and
+                for other purposes described in our
+                <a class="register-policy" href="#">privacy policy.</a>
+              </p>
+              <button type="submit" class="account-submit-btn">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../assets/js/common-event.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/parallax.js"></script>
+
+    <script>
+      // ============= Su kien click tab -> hien noi dung tuong ung ============
+      document.addEventListener("DOMContentLoaded", () => {
+        const tabGroups = document.querySelectorAll(".tabs-col");
+
+        tabGroups.forEach((group) => {
+          const links = group.querySelectorAll(".tabs-link");
+          const contents = group.querySelectorAll("div[id]");
+
+          // Ẩn tất cả content, chỉ show tab active ban đầu
+          contents.forEach((content) => {
+            content.style.display = "none";
+          });
+
+          const activeLink = group.querySelector(".tabs-link.active");
+          if (activeLink) {
+            const targetId = activeLink.getAttribute("href");
+            group.querySelector(targetId).style.display = "block";
+          }
+
+          links.forEach((link) => {
+            link.addEventListener("click", (e) => {
+              e.preventDefault();
+
+              // remove active
+              links.forEach((l) => l.classList.remove("active"));
+              contents.forEach((c) => (c.style.display = "none"));
+
+              // add active
+              link.classList.add("active");
+              const targetId = link.getAttribute("href");
+              group.querySelector(targetId).style.display = "block";
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

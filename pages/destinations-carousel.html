@@ -211,10 +211,7 @@
                     <img src="../assets/imgs/carousel-img-6.jpg" alt="" />
                   </a>
                 </div>
-                <a
-                  href="./destination/hiking.html"
-                  class="place-and-price"
-                >
+                <a href="./destination/hiking.html" class="place-and-price">
                   <span>Active</span>
                   <h2>Hiking</h2>
                 </a>
@@ -239,10 +236,7 @@
                     <img src="../assets/imgs/carousel-img-2.jpg" alt="" />
                   </a>
                 </div>
-                <a
-                  href="./destination/far-places.html"
-                  class="place-and-price"
-                >
+                <a href="./destination/far-places.html" class="place-and-price">
                   <span>Stunning</span>
                   <h2>Far Places</h2>
                 </a>
@@ -253,10 +247,7 @@
                     <img src="../assets/imgs/carousel-img-3.jpg" alt="" />
                   </a>
                 </div>
-                <a
-                  href="./destination/holiday.html"
-                  class="place-and-price"
-                >
+                <a href="./destination/holiday.html" class="place-and-price">
                   <span>Relaxing</span>
                   <h2>Holiday</h2>
                 </a>
@@ -267,10 +258,7 @@
                     <img src="../assets/imgs/carousel-img-4.jpg" alt="" />
                   </a>
                 </div>
-                <a
-                  href="./destination/wine-tour.html"
-                  class="place-and-price"
-                >
+                <a href="./destination/wine-tour.html" class="place-and-price">
                   <span>Romantic</span>
                   <h2>Wine Tour</h2>
                 </a>
@@ -454,6 +442,7 @@
         },
       });
 
+      // ============== Su kien truot slider bang cach lan chuot ============
       const sliderEl = document.querySelector(".des-slider-swiper");
 
       let wheelTimeout;
@@ -476,6 +465,7 @@
         { passive: false }
       );
 
+      // =========== Su kien dong/mo overlay ===========
       const barBtn = document.querySelector(".des-slider-menu span");
       const closeOvlBtn = document.querySelector(".close-overlay-btn-x");
 
@@ -489,6 +479,7 @@
           .classList.remove("visible");
       });
 
+      // =========== Su kien dong/mo submenu trong overlay ===========
       const menuItems = document.querySelectorAll(".des-menu-item");
 
       menuItems.forEach((item) => {
