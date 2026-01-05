@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="../../assets/css/base.css" />
     <link rel="stylesheet" href="../../assets/css/index.css" />
     <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link rel="stylesheet" href="../../assets/css/progress-bar.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
@@ -66,48 +67,6 @@
 
       .abu-btn:hover {
         background-color: #23a9af;
-      }
-
-      .progress-container-group {
-        max-width: 700px;
-      }
-
-      .progress-container {
-        margin: 0 0 30px;
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 1s ease;
-      }
-
-      .progress-container.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .progress-container .label {
-        display: flex;
-        justify-content: space-between;
-        font-size: 14px;
-        font-weight: 600;
-        margin: 0 0 8px;
-      }
-
-      .progress-bar {
-        position: relative;
-        width: 100%;
-        height: 20px;
-        border-radius: 10px;
-        background-color: #f2f1ec;
-        overflow: hidden;
-      }
-
-      .progress {
-        position: absolute;
-        height: 100%;
-        width: 0;
-        background-color: #30d5c8;
-        border-radius: 10px;
-        transition: none;
       }
     </style>
   </head>
@@ -1470,42 +1429,6 @@
     <script src="../../assets/js/main.js"></script>
     <script src="../../assets/js/swiper.js"></script>
     <script src="../../assets/js/parallax.js"></script>
-    <script>
-      const options = { threshold: 0.4 };
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const container = entry.target;
-            const progressEl = container.querySelector(".progress");
-            const percentEl = container.querySelector(".percent");
-            const target = +progressEl.dataset.target;
-
-            container.classList.add("visible");
-
-            // Đồng bộ phần trăm và thanh progress
-            let count = 0;
-            const duration = 3000; // tổng thời gian chạy (ms)
-            const frameRate = 1000 / 60; // ~60fps
-            const increment = target / (duration / frameRate);
-
-            const animate = setInterval(() => {
-              count += increment;
-              if (count >= target) {
-                count = target;
-                clearInterval(animate);
-              }
-              progressEl.style.width = count + "%";
-              percentEl.textContent = Math.round(count) + "%";
-            }, frameRate);
-
-            observer.unobserve(entry.target);
-          }
-        });
-      }, options);
-
-      document.querySelectorAll(".progress-container").forEach((container) => {
-        observer.observe(container);
-      });
-    </script>
+    <script src="../../assets/js/progress-bar.js"></script>
   </body>
 </html>
