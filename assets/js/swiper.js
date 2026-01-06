@@ -31,6 +31,38 @@ swiper.on("slideChangeTransitionStart", () => {
 });
 
 // ============ AUTO SHOWING SLIDER BELOW BANNER ============
+const slideCol3 = new Swiper(".slider-col-3", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: true,
+    speed: 600,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+
+    allowTouchMove: true,
+    // grabCursor: true,
+
+    pagination: {
+        el: ".custom-pagination",
+        clickable: true,
+    },
+
+    breakpoints: {
+        0: {},
+        576: {},
+        768: {},
+        992: {},
+        1200: {
+            slidesPerView: 3,
+        },
+        1400: {
+            slidesPerView: 3,
+        },
+    },
+});
+
 const paginationSlider = new Swiper('.slider-pagination', {
     slidesPerView: 4,
     spaceBetween: 20,
@@ -155,7 +187,10 @@ const oneCart = new Swiper('.one-card', {
     spaceBetween: 0,
     loop: true,
     // speed: 600,
-    autoplay: false,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
 
     allowTouchMove: true,
     // grabCursor: true,

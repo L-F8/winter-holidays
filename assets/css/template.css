@@ -1,0 +1,213 @@
+.common-card__right {
+    max-width: 260px;
+}
+
+.common-card__left-title,
+.common-card__contact-form h3 {
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: -1.5px;
+    line-height: 36px;
+    color: var(--black-color);
+}
+
+.common-card__left-desc,
+.common-card__right-desc {
+    color: #505050;
+    margin: 18px 0 0;
+    line-height: 24px;
+}
+
+.common-card__good-to-know,
+.common-card__contact-form,
+.common-card__newsletter {
+    background-color: var(--cyan-color);
+    padding: 40px;
+    color: var(--white-color);
+}
+
+.common-card__good-to-know h3 {
+    font-size: 30px;
+    letter-spacing: -1.5px;
+    font-weight: 600;
+    line-height: 36px;
+}
+
+.common-card__good-to-know p {}
+
+.common-card__item:first-child {
+    grid-column: span 2;
+}
+
+.common-card__image {
+    height: 226px;
+    position: relative;
+}
+
+.common-card__image img,
+.common-card__image a {
+    width: 100%;
+    height: 100%;
+}
+
+.common-card__image a {
+    position: absolute;
+    top: 0;
+    background-color: rgba(255, 255, 255, .25);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.common-card__image:hover a {
+    opacity: 1;
+    visibility: visible;
+}
+
+.common-card__contact-form form {
+    margin: 30px 0 0;
+}
+
+.common-card__contact-form h3,
+.common-card__contact-form input,
+.common-card__contact-form textarea,
+.common-card__contact-form input::placeholder,
+.common-card__contact-form textarea::placeholder {
+    color: var(--white-color);
+}
+
+.common-card__contact-form input,
+.common-card__contact-form textarea {
+    width: 100%;
+    padding: 10px 20px 10px 40px;
+    height: 145px;
+    background: rgba(255, 255, 255, 0.25);
+    color: #fff;
+}
+
+.common-card__contact-form input {
+    height: unset;
+}
+
+.common-card__contact-form form button,
+.common-card__newsletter button {
+    margin: 8px 0 0;
+    width: 100%;
+    cursor: pointer;
+    height: 40px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    transition: all .3s ease;
+}
+
+
+.common-card__newsletter button:hover,
+.common-card__contact-form form button:hover {
+    color: var(--white-color);
+    background-color: rgba(35, 169, 175, 1);
+}
+
+.common-card__input-group {
+    position: relative;
+    background-color: #f8f8f8;
+}
+
+.common-card__input-group input,
+.common-card__newsletter input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    padding: 16px 20px 16px 40px;
+}
+
+.common-card__input-group input,
+.common-card__input-group input::placeholder {
+    color: #848484;
+}
+
+.common-card__input-group a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 17px;
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--cyan-color);
+    color: var(--white-color);
+}
+
+.common-card__input-group a i {
+    transform: rotate(90deg);
+}
+
+.common-card__right-title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 0 0 32px;
+    color: var(--black-color);
+}
+
+.common-card__list {
+    margin: -10px 0 0
+}
+
+.common-card__list li {
+    padding: 0 0 14px;
+}
+
+.common-card__list li a {
+    display: inline-block;
+    line-height: 20px;
+    font-weight: 600;
+    color: var(--black-color);
+    transition: color .3s ease;
+}
+
+.common-card__list li a:hover {
+    color: var(--cyan-color);
+}
+
+.common-card__newsletter {
+    padding: 24px;
+}
+
+.common-card__newsletter h4 {
+    letter-spacing: -1.1px;
+    line-height: 28px;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 11px;
+}
+
+.common-card__newsletter p {
+    margin: 0 0 21px;
+}
+
+.common-card__newsletter .common-card__input-group {
+    margin-bottom: 8px;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.common-card__newsletter input,
+.common-card__newsletter input::placeholder {
+    color: var(--white-color);
+}
+
+.common-card__tag {
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: 600;
+    background-color: var(--cyan-color);
+    color: var(--white-color);
+    transition: all .3s ease;
+}
+
+.common-card__tag:hover {
+    background-color: #3abdc1;
+}

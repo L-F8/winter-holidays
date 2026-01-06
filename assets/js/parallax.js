@@ -4,4 +4,3 @@ window.addEventListener('scroll', function () {
     let offset = window.pageYOffset;
     bg.style.transform = `translateY(${offset * 0.3}px)`;
 });
-
